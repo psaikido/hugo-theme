@@ -1,0 +1,39 @@
+:root {
+    --pagefind-ui-scale: 2;
+    --pagefind-ui-primary: var(--bkg-major);
+    --pagefind-ui-text: var(--text-mute);
+    --pagefind-ui-border: var(--border-light);
+    --pagefind-ui-tag: #eeeeee;
+    --pagefind-ui-border-width: 1px;
+    --pagefind-ui-border-radius: 2px;
+    --pagefind-ui-image-border-radius: 2px;
+    --pagefind-ui-image-box-ratio: 3 / 2;
+    --pagefind-ui-font: sans-serif;
+}
+
+@include screen-width('medium') {
+    .pagefind-ui {
+        position: absolute;
+        display: block;
+    }
+}
+
+.pagefind-ui {
+	position: relative;
+}
+
+.pagefind-ui__drawer {
+    background-color: var(--bkg-major);
+    font-size: 80%;
+		margin-top: -10px;
+		margin-bottom: 20px;
+		max-width: 700px;
+}
+
+button.pagefind-ui__button {
+    display: none;
+}
+
+.search {
+	margin-bottom: 15px;
+}

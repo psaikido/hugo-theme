@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+    {{ partial "head.html" . }}
+
+    <body>
+			<div class="grid-wrap">
+        {{ partial "header.html" . }}
+				{{ partial "menu.html" . }}
+
+        <main class="main-content" data-pagefind-body>
+					{{ partial "pagefind.html" . }}
+
+					{{ block "main" . }}
+					{{ end }}
+        </main>
+
+        {{ partial "footer.html" . }}
+
+				<script src="/js/cookie-toggler.js"></script>
+			</div>
+    </body>
+</html>

@@ -1,0 +1,140 @@
+heading a {
+	letter-spacing: 10px;
+	font-style: italic;
+	font-size: 2.5em;
+	text-decoration: underline;
+	color: var(--hilight); 
+}
+
+@include screen-width('medium') {
+	heading a {
+		margin-left: 250px;
+	}
+}
+
+.gallery {
+	margin: 10px 100px 10px 250px;
+
+	img {
+		margin: 20px;  
+	}
+}
+
+main {
+	margin: 10px;
+	max-width: 700px;
+	text-align: left;
+
+	.home {
+		img {
+			margin-right: 30px;  
+		}
+	}
+}
+
+.blocktext {
+	text-align: left;
+}
+
+.record {
+	text-align: left;
+	border: 1px solid var(--border-light);
+	min-height: 200px;
+	max-width: 800px;
+	margin-bottom: 10px;
+	padding: 10px;
+
+	.divLeft {
+		float: left;
+		margin-right: 10px;
+
+		img {
+			height: auto;
+		}
+	}
+
+	@include screen-width('medium') {
+		.divRight {
+			margin: 0 10px 10px 230px;
+		}
+	}
+
+	img {
+		margin: 10px;
+	}
+}
+
+
+.clearer {
+	clear: both;
+	height: 1px;
+	font: 0pt;
+}
+
+.img {
+	text-align: right;
+	font: 0.7em;
+}
+
+.description {
+	letter-spacing: 1px;
+}
+
+.description a:link {
+	text-decoration: underline;
+}
+
+.picInfo {
+	font-size: 0.7em;
+	font-style: italic;
+	margin-top:  20px;
+}
+
+#topbar, #bottombar {
+	letter-spacing: 3px;
+	margin-bottom: 10px;
+	height: 30px;
+}
+
+#topbar a, #bottombar a {
+	text-decoration: underline;
+	letter-spacing: 3px;
+}
+
+.desc_user_date, .location, .date, .year, .who, .takenby {
+	font-style: italic;
+	font-size: 0.8em;
+	margin-top: 5px;
+	letter-spacing: 3px;
+	color: var(--text-mute);
+}
+
+.birthday {
+	width: 300px;
+}
+
+footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	height: 30px;
+	text-align: center;
+	width: 100%;
+	font-size: 18px;
+	font-style: italic;
+	background-color: var(--text-major);
+	color: var(--bkg-major);
+
+	form fieldset {
+		float: left;
+		height: 22px;
+		width: 50%;
+		margin: -4px 0 0 20px;
+		border: none;
+		text-align: left;
+
+		legend {
+			float: left;
+		}
+	}
+}

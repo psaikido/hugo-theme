@@ -1,0 +1,46 @@
+{{ define "main" }}
+	<h2 data-pagefind-meta="title">{{ .Params.title }}</h2>
+
+	{{ $data := index .Site.Data .Params.dataFile }}
+
+	{{ range $data.images }}
+		<div class="record">
+			<div class="divLeft">
+				<a href="{{ $data.dir }}{{ .img }}">
+					<img src="{{ $data.dir }}thms/thm_{{ .img }}" />
+				</a>
+			</div>
+
+			<div class="divRight">
+				{{ with .description }}
+					{{ . }}<br />
+				{{ end }}
+				
+				<div class="picInfo">
+						{{ with .user }}
+							note by: {{ . }}<br />
+						{{ end }}
+
+						{{ with .date }}
+							edited: {{ . }}<br />
+						{{ end }}
+
+						{{ with .location }}
+							Location: {{ . }}<br />
+						{{ end }}
+
+						{{ with .who }}
+							who: {{ . }}<br />
+						{{ end }}
+				</div>
+			</div>
+
+			<div class="clearer">&nbsp;</div>
+		</div>
+	{{ end }}
+
+	{{ with .Params.next }}
+		<a href="{{ $data.dir }}{{ . }}">[next] -> {{ . }}</a>
+	{{ end }}
+
+{{ end }}
